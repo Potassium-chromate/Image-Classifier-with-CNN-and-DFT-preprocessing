@@ -6,7 +6,10 @@ This project aims to develop a Convolutional Neural Network (CNN) based image cl
 The code is written in Python, and uses tensorflow, keras, pandas, numpy, seaborn, matplotlib, sklearn, PIL, and cv2 libraries. Make sure these are installed in your environment.
 
 ## Dataset
-The dataset should consist of grayscale images divided into four categories: cloudy, rain, shine, and sunrise. Place the training and test datasets in separate directories for each category.
+The dataset should consist of grayscale images divided into four categories: cloudy, rain, shine, and sunrise. Place the training and test datasets in separate directories for each category.  
+| label | cloudy | rain | sunrise |
+|:-----:|:-----:|:-----:|:-----:|
+|0|1|2||3|
 
 ## Running the Code
 To run the code, provide the appropriate paths for the training and test datasets. Also, specify the desired target size for resizing the images. The model is trained using the training dataset and evaluated on the test dataset. The training and validation accuracy and loss are plotted. The confusion matrix is also displayed for both the training and test sets.
