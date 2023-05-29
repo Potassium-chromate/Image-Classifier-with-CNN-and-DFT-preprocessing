@@ -9,19 +9,27 @@ The code is written in Python, and uses tensorflow, keras, pandas, numpy, seabor
 The dataset should consist of grayscale images divided into four categories: cloudy, rain, shine, and sunrise. Place the training and test datasets in separate directories for each category.  
 | label | cloudy | rain | sunrise |
 |:-----:|:-----:|:-----:|:-----:|
-|0|1|2||3|
+|0|1|2|3|
 
+## Model
+![ALT](https://github.com/Potassium-chromate/CNN-for-recognizer-weather/blob/main/Picture/Model%20structure.png)
 ## Running the Code
 To run the code, provide the appropriate paths for the training and test datasets. Also, specify the desired target size for resizing the images. The model is trained using the training dataset and evaluated on the test dataset. The training and validation accuracy and loss are plotted. The confusion matrix is also displayed for both the training and test sets.
 
 The code also includes data augmentation (rotation and flipping) in the load function, but it's currently not being used. You can utilize it by passing 'yes' as the argument while loading the data.
 
 ## Results
-After training, the model achieves an accuracy of 90.55% and a loss of 0.2641 on the training data, and an accuracy of 77.33% and a loss of 0.6458 on the validation data. These results show that the model has learned to classify the images with reasonable accuracy.
+### RGB
+|       |train_acc|train_loss|test_acc|test_loss|
+|:-----:|:-------:|:--------:|:------:|:-------:|
+|CNN    |0.937    | 0.14     | 0.9067 |  0.8187 |  
+|DFT + CNN|0.9494    | 0.14     | 0.92 |  0.698 |  
+### Gray
+|       |train_acc|train_loss|test_acc|test_loss|
+|:-----:|:-------:|:--------:|:------:|:-------:|
+|CNN    |0.9656   | 0.1078   | 0.7467 |  1.2034 |  
+|DFT + CNN|0.9055 | 0.2641   | 0.7733 |  0.6454 |  
 
-Note: The performance gain by using DFT preprocessing might vary depending on the specifics of the dataset, the model, and the task. Here, DFT preprocessing improves the model's performance slightly, but your mileage may vary.
-
-Remember that DFT preprocessing and other transformations are tools in your toolkit, and their effectiveness will largely depend on the specifics of the task at hand. It's always good to experiment and find what works best for your particular problem.
 
 
 
