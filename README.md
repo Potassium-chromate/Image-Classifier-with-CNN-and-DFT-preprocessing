@@ -4,7 +4,15 @@
 The idea behind this project stems from the potential of DFT to reveal additional patterns or features not easily accessible in the spatial domain of images. By transforming images into their frequency domain, it is hypothesized that the model can gain a more comprehensive understanding of the images, possibly leading to improved classification accuracy.
 
 ## Installation
-The code is written in Python, and uses tensorflow, keras, pandas, numpy, seaborn, matplotlib, sklearn, PIL, and cv2 libraries. Make sure these are installed in your environment.
+require libray
+- opencv-python
+- matplotlib
+- tensorflow
+- Pillow
+- numpy
+- scikit-learn
+- seaborn
+- pandas
 
 ## Dataset
 The dataset should consist of grayscale images divided into four categories: cloudy, rain, shine, and sunrise. Place the training and test datasets in separate directories for each category.  
