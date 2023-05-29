@@ -24,11 +24,27 @@ The code also includes data augmentation (rotation and flipping) in the load fun
 |:-----:|:-------:|:--------:|:------:|:-------:|
 |CNN    |0.937    | 0.14     | 0.9067 |  0.8187 |  
 |DFT + CNN|0.9494    | 0.14     | 0.92 |  0.698 |  
+#### CNN confusion matrix
+![ALT](https://github.com/Potassium-chromate/Image-Classifier-with-CNN-and-DFT-preprocessing/blob/main/picture/RGB/CNN_RGB%20confusion_test.png)
+#### DFT+CNN confusion matrix
+![ALT](https://github.com/Potassium-chromate/Image-Classifier-with-CNN-and-DFT-preprocessing/blob/main/picture/RGB/DFT_RGB%20confusion_test.png)
 ### Gray
 |       |train_acc|train_loss|test_acc|test_loss|
 |:-----:|:-------:|:--------:|:------:|:-------:|
 |CNN    |0.9656   | 0.1078   | 0.7467 |  1.2034 |  
 |DFT + CNN|0.9055 | 0.2641   | 0.7733 |  0.6454 |  
+#### CNN confusion matrix
+![ALT](https://github.com/Potassium-chromate/Image-Classifier-with-CNN-and-DFT-preprocessing/blob/main/picture/GRAY/CNN%20confusion_test.png)
+#### DFT+CNN confusion matrix
+![ALT](https://github.com/Potassium-chromate/Image-Classifier-with-CNN-and-DFT-preprocessing/blob/main/picture/GRAY/DFT%20confusion_test.png)
+
+## Discussion
+The DFT (Discrete Fourier Transform) is a tool used to analyze the frequency components of digital signals. In image processing, the 2D version of DFT is used which transforms the image from its spatial domain to its frequency domain.
+
+Each pixel in an image represents a particular intensity to be displayed. But if we perform DFT on the image, each pixel will now represent a particular frequency contained in the spatial domain image. Low frequencies in the Fourier domain image correspond to slow changes in the spatial domain image, while high frequencies correspond to fast changes.
+
+When applying the DFT to an image, you're essentially revealing information that wasn't easily accessible in the time/space domain. Patterns, details, and structures in the frequency domain might help the model to learn and make decisions better, which is why applying DFT to the image might lead to better model performance.
+
 
 
 
