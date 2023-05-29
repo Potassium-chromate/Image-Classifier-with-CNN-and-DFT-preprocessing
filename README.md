@@ -1,6 +1,7 @@
 # Image-Classifier-with-CNN-and-DFT-preprocessing
 
-This project aims to develop a Convolutional Neural Network (CNN) based image classifier for four weather conditions: cloudy, rain, shine, and sunrise. The images are preprocessed using Discrete Fourier Transform (DFT) to convert them into their frequency domain, which potentially reveals additional patterns or features not easily accessible in the spatial domain. This additional information might aid in the model's decision-making process, leading to improved performance.
+## Project Description
+The idea behind this project stems from the potential of DFT to reveal additional patterns or features not easily accessible in the spatial domain of images. By transforming images into their frequency domain, it is hypothesized that the model can gain a more comprehensive understanding of the images, possibly leading to improved classification accuracy.
 
 ## Installation
 The code is written in Python, and uses tensorflow, keras, pandas, numpy, seaborn, matplotlib, sklearn, PIL, and cv2 libraries. Make sure these are installed in your environment.
