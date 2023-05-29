@@ -140,12 +140,14 @@ class preprocessing:
                     for angle in [45,60]:
                         rotated_img = img.rotate(angle)
                         rotated_img_array = np.array(rotated_img)
+                        rotated_img_array = np.fft.fftshift(np.fft.fft2(rotated_img_array/255.0))
                         ret_data.append(rotated_img_array)
                         ret_label.append(label)
          
                     # Add flipped versions of the image
                     flipped_img = ImageOps.flip(img)
                     flipped_img_array = np.array(flipped_img)
+                    flipped_img_array = np.fft.fftshift(np.fft.fft2(flipped_img_array/255.0))
                     ret_data.append(flipped_img_array)
                     ret_label.append(label)
                     
